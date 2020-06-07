@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_eventDetails"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="40dp"
+                android:padding="@dimen/padding"
+                app:layout_constraintTop_toBottomOf="@id/txt_eventDetails_title"/>
+
+            <LinearLayout
+                android:id="@+id/linLay_dateAndTime_events2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/img_eventDetails">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="46dp">
+
+                    <ImageView
+                        android:id="@+id/icon_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/padding"
+                        android:src="@drawable/tear_off_calendar_24px" />
+
+                    <TextView
+                        android:id="@+id/txt_event2_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingVertical="@dimen/padding"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/clock_24px"
+                        android:paddingVertical="@dimen/padding" />
+
+                    <TextView
+                        android:id="@+id/txt_event2_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingVertical="@dimen/padding"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_eventDetails_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:text="Title"
+                android:layout_marginHorizontal="40dp"
+                android:textColor="@color/crew_text_color"
+                android:textSize="@dimen/heading_size"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_event2_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_marginHorizontal="30dp"
+                android:gravity="fill_horizontal"
+                android:textAlignment="inherit"
+                app:layout_constraintTop_toBottomOf="@id/linLay_dateAndTime_events2" />
+
+            <Button
+                android:id="@+id/btn_eventDetails_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                app:layout_constraintTop_toBottomOf="@id/txt_event2_desc"
+                android:layout_margin="60dp"
+                android:background="@drawable/button_rounded"
+                android:text="CLICK HERE TO REGISTER!"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

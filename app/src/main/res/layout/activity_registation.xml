@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+    <TextView
+        android:id="@+id/txt_reg_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="Title"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/crew_text_color"
+        android:textSize="@dimen/heading_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_reg_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:textColor="#000000"
+        android:background="@drawable/button_rounded"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@+id/til_reg_phone" />
+
+    <Spinner
+        android:id="@+id/spn_reg_sec"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@id/til_recReg_rollNo"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:padding="@dimen/padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spn_reg_dept" />
+
+    <Spinner
+        android:id="@+id/spn_reg_dept"
+        android:layout_width="0dp"
+        android:nextFocusDown="@id/spn_recReg_year"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="10dp"
+        android:padding="@dimen/padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/spn_reg_year"
+        app:layout_constraintTop_toBottomOf="@id/til_reg_name" />
+
+    <Spinner
+        android:id="@+id/spn_reg_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@id/spn_recReg_sec"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="40dp"
+        android:padding="@dimen/padding"
+        app:layout_constraintLeft_toRightOf="@id/spn_reg_dept"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_reg_name" />
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_reg_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:nextFocusUp="@id/til_recReg_name"
+        android:nextFocusDown="@id/spn_recReg_dept"
+        android:textColorHint="@color/crew_text_color"
+        app:hintTextColor="@color/crew_text_color"
+        app:layout_constraintTop_toBottomOf="@id/txt_reg_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inp_reg_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="40dp"
+            android:hint="Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_reg_rollNo"
+        android:layout_width="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginStart="10dp"
+        android:textColorHint="@color/crew_text_color"
+        app:hintTextColor="@color/crew_text_color"
+        app:layout_constraintBottom_toBottomOf="@id/spn_reg_sec"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@id/til_recReg_phone"
+        app:layout_constraintLeft_toRightOf="@id/spn_reg_sec"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spn_reg_year">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inp_reg_rollNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="11"
+            android:layout_marginEnd="40dp"
+            android:hint="RollNo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_reg_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:textColorHint="@color/crew_text_color"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:hintTextColor="@color/crew_text_color"
+        app:layout_constraintTop_toBottomOf="@id/til_reg_rollNo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inp_reg_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="10"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="40dp"
+            android:hint="Phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_home_devInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:padding="@dimen/padding"
+        android:text="@string/devInfo"
+        android:textSize="@dimen/font_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/imageView1_shimmer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/shimmer_margin"
+        card_view:layout_constraintHorizontal_weight="1"
+        android:paddingBottom="@dimen/padding"
+        android:adjustViewBounds="true"
+        android:background="@color/placeholder_bg"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toLeftOf="@id/imageView2_shimmer"/>
+
+    <TextView
+        android:id="@+id/txt_shimmer_name1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size"
+        android:padding="@dimen/padding"
+        android:layout_marginHorizontal="@dimen/shimmer_margin"
+        card_view:layout_constraintHorizontal_weight="1"
+        android:background="@color/placeholder_bg"
+        android:textColor="@color/crew_text_color"
+        card_view:layout_constraintTop_toBottomOf="@id/imageView1_shimmer"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toLeftOf="@id/txt_shimmer_name2"/>
+
+    <View
+        android:id="@+id/imageView2_shimmer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/shimmer_margin"
+        card_view:layout_constraintHorizontal_weight="1"
+        android:paddingBottom="@dimen/padding"
+        android:adjustViewBounds="true"
+        android:background="@color/placeholder_bg"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintLeft_toRightOf="@id/imageView1_shimmer"/>
+
+    <TextView
+        android:id="@+id/txt_shimmer_name2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size"
+        android:padding="@dimen/padding"
+        android:layout_marginHorizontal="@dimen/shimmer_margin"
+        card_view:layout_constraintHorizontal_weight="1"
+        android:background="@color/placeholder_bg"
+        android:textColor="@color/crew_text_color"
+        card_view:layout_constraintTop_toBottomOf="@id/imageView2_shimmer"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintLeft_toRightOf="@id/txt_shimmer_name1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<ImageView
+                android:id="@+id/img_homepage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:src="@drawable/logo"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <TextView
+                android:id="@+id/text_tamHeading"
+                android:textStyle="bold"
+                android:text="@string/tam_heading"
+                android:padding="@dimen/padding"
+                android:textSize="@dimen/tamHeadingSize"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="42dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:padding="@dimen/padding"
+                android:textSize="@dimen/heading_size"
+                app:layout_constraintTop_toBottomOf="@id/text_tamHeading" />
+
+            <TextView
+                android:id="@+id/text_home_devInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="42dp"
+                android:gravity="center"
+                android:padding="@dimen/padding"
+                android:text="@string/devInfo"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/txt_info" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

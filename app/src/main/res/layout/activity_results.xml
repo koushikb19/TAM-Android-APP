@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<ImageView
+                android:id="@+id/img_homepage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:src="@drawable/logo"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <TextView
+                android:id="@+id/text_resultsHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="42dp"
+                android:padding="@dimen/padding"
+                android:text="@string/results"
+                android:textSize="@dimen/tamHeadingSize"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_infoResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:padding="@dimen/padding"
+                android:textSize="@dimen/heading_size"
+                app:layout_constraintTop_toBottomOf="@id/text_resultsHeading" />
+
+            <TextView
+                android:id="@+id/text_results_feedbackHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="42dp"
+                android:padding="@dimen/padding"
+                android:text="Feedback"
+                android:textSize="@dimen/tamHeadingSize"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/txt_infoResults" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/text_results_feedbackHeading">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:hint="Name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_results_feedback"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_results_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:gravity="top"
+                    android:hint="Feedback"
+                    android:lines="9" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_results_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/til_results_feedback">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_results_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:hint="Phone"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_recReg_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_rounded"
+                android:padding="@dimen/padding"
+                android:text="Submit"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/til_results_phone" />
+
+            <TextView
+                android:id="@+id/text_devInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="42dp"
+                android:gravity="center"
+                android:padding="@dimen/padding"
+                android:text="@string/devInfo"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/btn_recReg_submit" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

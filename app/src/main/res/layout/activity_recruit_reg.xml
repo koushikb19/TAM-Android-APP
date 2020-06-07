@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_recReg_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:padding="@dimen/padding"
+                android:text="Title"
+                android:textColor="@color/crew_text_color"
+                android:textSize="@dimen/heading_size"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_recReg_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:background="@drawable/button_rounded"
+                android:text="Submit"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/til_recReg_unique" />
+
+            <Spinner
+                android:id="@+id/spn_recReg_sec"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:nextFocusDown="@id/til_recReg_rollNo"
+                android:padding="@dimen/padding"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spn_recReg_dept" />
+
+            <Spinner
+                android:id="@+id/spn_recReg_dept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="10dp"
+                android:nextFocusDown="@id/spn_recReg_year"
+                android:padding="@dimen/padding"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/spn_recReg_year"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_name" />
+
+            <Spinner
+                android:id="@+id/spn_recReg_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="40dp"
+                android:nextFocusDown="@id/spn_recReg_sec"
+                android:padding="@dimen/padding"
+                app:layout_constraintLeft_toRightOf="@id/spn_recReg_dept"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_name" />
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nextFocusUp="@id/til_recReg_name"
+                android:nextFocusDown="@id/spn_recReg_dept"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/txt_recReg_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:hint="Name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_rollNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:nextFocusDown="@id/til_recReg_phone"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintBottom_toBottomOf="@id/spn_recReg_sec"
+                app:layout_constraintLeft_toRightOf="@id/spn_recReg_sec"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spn_recReg_year">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_rollNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="40dp"
+                    android:hint="RollNo"
+                    android:maxLength="11" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_rollNo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:hint="Phone"
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_asset"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/txt_recReg_assetQuest">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_asset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:hint="Answer"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_dept"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/txt_recReg_deptQuest">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_dept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:hint="Answer" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_recReg_unique"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textColorHint="@color/crew_text_color"
+                app:hintTextColor="@color/crew_text_color"
+                app:layout_constraintTop_toBottomOf="@id/txt_recReg_uniqueQuest">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inp_recReg_unique"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:hint="Answer"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_home_devInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="42dp"
+                android:gravity="center"
+                android:padding="@dimen/padding"
+                android:text="@string/devInfo"
+                android:textSize="@dimen/font_size"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/btn_recReg_submit"/>
+
+            <TextView
+                android:id="@+id/txt_recReg_assetQuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:text="@string/asset_question"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_phone" />
+
+            <TextView
+                android:id="@+id/txt_recReg_deptQuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:text="@string/dept_quest"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_asset" />
+
+            <TextView
+                android:id="@+id/txt_recReg_uniqueQuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:text="@string/unique_quest"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/til_recReg_dept" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

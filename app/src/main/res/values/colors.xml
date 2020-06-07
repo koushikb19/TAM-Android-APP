@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303030</color>
+    <color name="colorPrimaryDark">#303030</color>
+    <color name="btmNavBarColor">#1F1F1F</color>
+    <color name="colorAccent">#bdbdbd</color>
+    <color name="background">#121212</color>
+    <color name="crew_text_color">#f9f9f9</color>
+    <color name="Board_heading_color">#ffffff</color>
+    <color name="splash_background">#000000</color>
+    <color name="button_color">#BB86FC</color>
+    <color name="box_color">#BB86FC</color>
+    <color name="placeholder_bg">#2E2F33</color>
+
+</resources>
