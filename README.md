@@ -68,3 +68,6 @@ collegeList : [ // Array of names of colleges
 ]
 
 The registrations will be stored under Registrations object with the event name.
+
+For any suggestions/queries:
+email: koushik.bhargava@gmail.com
