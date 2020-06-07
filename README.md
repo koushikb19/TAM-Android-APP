@@ -33,7 +33,7 @@ Add the details of your Organisation/Company, events, quizzes, crew in firebase 
     }]
 
 ### Adding Event/Quizzes
-The schema for Event and quiz is same which is given below
+    The schema for Event and quiz is same which is given below
     events/QuizzesList: [ { // Make two arrays in the root directory events for event details, QuizzesList for quiz details
         Details: "String", // Event details. A short description of the event
         content: "String", // Long description of the event
@@ -48,7 +48,7 @@ The schema for Event and quiz is same which is given below
     } ]
 
 ### Adding Crew Details.
-The schema for Crew is as follows
+    The schema for Crew is as follows
     Crew : [ {
         Department : "String", // Name of the department
         members: [ { // Members of that department
@@ -61,7 +61,7 @@ The schema for Crew is as follows
     } ]
 
 ### Adding list of colleges
-This will set the list of colleges to select if the event is inter-college
+    This will set the list of colleges to select if the event is inter-college
     collegeList : [ // Array of names of colleges
         "String" // Add the name of the college
     ]
